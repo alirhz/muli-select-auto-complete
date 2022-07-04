@@ -1,0 +1,26 @@
+<div>
+  <mat-form-field appearance="outline" class="full-width">
+    <input matInput type="text" required="required" [placeholder]="placeholder" [matAutocomplete]="auto"
+      [formControl]="selectControl">
+    <mat-chip-list #chipList>
+      <ng-container *ngFor="let select of selectData">
+        <mat-chip class="cardinal-colors">
+          {{ select.key }}
+        </mat-chip>
+      </ng-container>
+    </mat-chip-list>
+    <mat-autocomplete #auto="matAutocomplete" (closed)="checkValidation()" (bottom)="onScrollButtom()"
+      (optionsScroll)="onScrollButtom()" [displayWith]="displayFn">
+      <mat-option *ngFor="let data of filteredData | async">
+        <div (click)="optionClicked($event, data)">
+          <mat-checkbox [checked]="data.selected" (change)="toggleSelection(data)" (click)="$event.stopPropagation()">
+            {{ data.key }} - {{data.value}}
+          </mat-checkbox>
+        </div>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <div *ngIf="required">
+    <mat-error *ngIf="checkValidaiotn">"This field is required</mat-error>
+  </div>
+</div>
