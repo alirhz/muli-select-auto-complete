@@ -8,16 +8,17 @@ import { MatAutocompleteOptionsScrollDirective } from './shared/bottom.directive
 import { DataService } from './service/data.service';
 import { MultiSelectAutoCompleteComponent } from './multi-select-auto-complete/multi-select-auto-complete.component';
 import { MapComponent } from './map/map.component';
-import { GeoLocationService } from './service/geo-location.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { MarkerDialogComponent } from './map/marker dialog/marker.dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
     MultiSelectAutoCompleteComponent,
-    MatAutocompleteOptionsScrollDirective
+    MatAutocompleteOptionsScrollDirective,
+    MarkerDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     LeafletModule,
     BrowserAnimationsModule
   ],
-  providers: [DataService,GeoLocationService,HttpClient],
+  providers: [DataService,HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
