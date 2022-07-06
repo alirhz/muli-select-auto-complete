@@ -45,7 +45,7 @@ export class DataService {
 
   // getAppendDataFromHttp() {
     // this.http.get<any>(this.apiUrl + Url,_data);
-    // return this.getRequest('Story', storyModel).subscribe({
+    // return this.getRequest('api', Model).subscribe({
     //   next: (value) =>
     //     return of(value);
     //   error: () => {

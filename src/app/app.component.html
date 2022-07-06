@@ -1,10 +1,9 @@
 <mat-card class="card-wrapper">
-  <multiselect-autocomplete
-    placeholder="Select Items Here ..."
-    key="options"
-    [data]="options"
-    [required]="true"
-    (appendData)="getData()"
-    (result)="selectChange($event)">
+  <multiselect-autocomplete placeholder="Select Items Here ..." key="options" [data]="options" [required]="true"
+    (appendData)="getData()" (result)="selectChange($event)">
   </multiselect-autocomplete>
+</mat-card>
+
+<mat-card class="card-wrapper" style="height: 100%;">
+  <app-map></app-map>
 </mat-card>

@@ -1,0 +1,7 @@
+<div mat-dialog-content>
+  <p>Are you sure you want to change the location?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onButtonClick(false)">No Thanks</button>
+  <button mat-button cdkFocusInitial (click)="onButtonClick(true)">Confirm</button>
+</div>

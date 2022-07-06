@@ -75,7 +75,7 @@ const MaterialModules = [
   MatNativeDateModule,
   FormsModule,
   ReactiveFormsModule,
-  ScrollingModule
+  ScrollingModule,
 ]
 
 @NgModule({
